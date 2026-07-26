@@ -37,13 +37,13 @@ from src.memoria import generar_thread_id
 from src.monitoreo import generar_resumen_monitoreo
 
 
-# ============================================================
-# CONFIGURACIÓN DE LA PÁGINA
-# ============================================================
+
+# CONFIGURACIÓN DE LA PAGINA
+
 
 st.set_page_config(
-    page_title="Asistente Patito S.A.",
-    page_icon="🦆",
+    page_title="IA ESTAMOS | Asistente Patito S.A.",
+    page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -503,9 +503,9 @@ with st.sidebar:
     )
 
 
-# ============================================================
+
 # ENCABEZADO PRINCIPAL
-# ============================================================
+
 
 st.title(
     "Asistente Comercial Patito S.A."
@@ -526,7 +526,8 @@ st.caption(
 st.divider()
 
 
-# ============================================================
+#-------------------------------
+
 # HISTORIAL VISUAL
 # ============================================================
 
