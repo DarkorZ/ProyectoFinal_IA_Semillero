@@ -10,21 +10,20 @@ Este módulo:
 No crea agentes ni realiza llamadas a Gemini.
 """
 
-import os
-from pathlib import Path
+import os #libreria de interaccion con S.O. para obtener las variables de entorno 
+from pathlib import Path #permite la maniplacion y construccion de archivos
 
-from dotenv import load_dotenv
+from dotenv import load_dotenv #nos ayuda a leer las variables almacenadas en .env
 
 
-# ============================================================
+
 # RUTAS PRINCIPALES
-# ============================================================
 
 # Ruta de la carpeta raíz del proyecto.
 # __file__ corresponde a: src/config.py
 # parent corresponde a: src/
 # parent.parent corresponde a la raíz del proyecto.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent #de esta forma obtenemos la ruta del proyecto sin determinar una ruta fija
 
 DATA_DIR = BASE_DIR / "data"
 VECTORSTORES_DIR = BASE_DIR / "vectorstores"
@@ -32,11 +31,10 @@ OUTPUTS_DIR = BASE_DIR / "outputs"
 ASSETS_DIR = BASE_DIR / "assets"
 
 
-# ============================================================
-# CARGA DE VARIABLES DE ENTORNO
-# ============================================================
 
-ENV_FILE = BASE_DIR / ".env"
+# CARGA DE VARIABLES DE ENTORNO
+
+ENV_FILE = BASE_DIR / ".env" #obtener la ruta de .env para utilizarla
 
 # Carga las variables definidas en el archivo .env.
 load_dotenv(dotenv_path=ENV_FILE)
@@ -44,22 +42,20 @@ load_dotenv(dotenv_path=ENV_FILE)
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 
-# ============================================================
-# MODELOS DE GOOGLE GEMINI
-# ============================================================
+
+#-------------------------------------- MODELOS DE GOOGLE GEMINI
+
 
 # Modelo utilizado para respuestas, agentes y orquestación.
-MODELO_LLM = "gemini-3.5-flash"
+MODELO_LLM = "gemini-3.5-flash" #determinamos el modelo a utilizar, el modelo de gemini 3.5
  
 # Modelo utilizado para convertir texto en vectores.
-MODELO_EMBEDDING = "models/gemini-embedding-001"
+MODELO_EMBEDDING = "models/gemini-embedding-001" # utilizamos el modelo de embeddings de gemini
 
 
-# ============================================================
-# PARÁMETROS DE GENERACIÓN
-# ============================================================
+# ------------------ PARAMETROS DE GENERACIÓN
 
-# Una temperatura baja favorece respuestas consistentes.
+# Requerimos informacion precisa de la documentacion, al ser un agente para ventas. La temperatura se determina en 0
 TEMPERATURE = 0.0
 
 # Tiempo máximo aproximado para una solicitud al modelo.
@@ -69,18 +65,14 @@ TIMEOUT_SEGUNDOS = 60
 MAX_RETRIES = 2
 
 
-# ============================================================
 # PARÁMETROS RAG
-# ============================================================
 
-CHUNK_SIZE = 500
-CHUNK_OVERLAP = 80
-TOP_K = 3
+CHUNK_SIZE = 500 #determinamos el valor de cada caracter de cada framgneot de cada documento que vamos a obtener para la indexeacion 
+CHUNK_OVERLAP = 80 # definimos un overlap de 80 para que los chunk obtengan contexto suficiente
+TOP_K = 3 #top 3 documentos mas cercanos al embedding realizado
 
 
-# ============================================================
 # DOCUMENTOS DE CONOCIMIENTO
-# ============================================================
 
 ARCHIVO_CATALOGO = DATA_DIR / "01_Catalogo_Productos_Precios.txt"
 
@@ -91,27 +83,25 @@ ARCHIVO_POLITICAS = (
 ARCHIVO_CRM = DATA_DIR / "03_Proceso_Ventas_CRM.txt"
 
 
-# ============================================================
 # ÍNDICES VECTORIALES
-# ============================================================
+
 
 VECTORSTORE_CATALOGO = VECTORSTORES_DIR / "catalogo"
 VECTORSTORE_POLITICAS = VECTORSTORES_DIR / "politicas"
 VECTORSTORE_CRM = VECTORSTORES_DIR / "crm"
 
 
-# ============================================================
+
 # NOMBRES DE COLECCIONES CHROMA
-# ============================================================
+
 
 COLECCION_CATALOGO = "patito_catalogo"
 COLECCION_POLITICAS = "patito_politicas"
 COLECCION_CRM = "patito_crm"
 
 
-# ============================================================
 # VALIDACIONES
-# ============================================================
+
 
 def validar_configuracion() -> None:
     """
@@ -171,9 +161,8 @@ def crear_directorios_necesarios() -> None:
         directorio.mkdir(parents=True, exist_ok=True)
 
 
-# ============================================================
 # LÍMITES OPERATIVOS
-# ============================================================
+
 
 # Máximo de caracteres permitidos en una consulta individual.
 MAX_CONSULTA_CARACTERES = 5000
