@@ -442,33 +442,12 @@ Limitaciones actuales:
 * Ejecución local de Streamlit.
 * Reglas de seguridad determinísticas.
 
----
-
-## Mejoras futuras
-
-Para una versión productiva se propone:
-
-* Memoria persistente con PostgreSQL.
-* Integración con un CRM real.
-* Autenticación y control de roles.
-* Permisos por agente y documento.
-* Registro de autorizaciones comerciales.
-* Métricas completas por agente.
-* Feedback de usuarios.
-* Panel administrativo.
-* Docker.
-* Despliegue en nube.
-* CI/CD.
-* Evaluación automática de RAG.
-* Agente multimodal.
-* Procesamiento de órdenes de compra y cotizaciones.
-
 
 ---
 
 ## Equipo "IA estamos"
 
-Proyecto desarrollado por el equipo **IA estamos** como parte del **II Semillero de Inteligencia Artificial Netlife–UG 2026**.
+Proyecto desarrollado por el equipo **IA estamos** como parte del **II Semillero de Inteligencia Artificial 2026**.
 
 El propósito de la implementación es demostrar el uso práctico de:
 
