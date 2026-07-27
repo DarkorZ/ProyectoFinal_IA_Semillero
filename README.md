@@ -160,9 +160,6 @@ ProyectoFinal_IA_Netlife/
 
 [Consultar las pruebas del sistema](./AgentePatito_sa/tests)
 
-### Ejemplo del archivo generado
-
-[Consultar el registro de oportunidades de ejemplo](./AgentePatito_sa/examples/registro_oportunidades.txt)
 
 ---
 
