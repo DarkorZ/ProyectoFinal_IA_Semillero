@@ -13,8 +13,16 @@ La solución utiliza agentes especializados construidos con LangChain, un agente
 ## Equipo
 
 **Nombre del equipo:** IA estamos
+---
 
-## Link del video: 
+## Video de demostración
+
+El video explica la arquitectura, la configuración de los agentes, el proceso RAG, la decisión del orquestador, la consulta mixta, el Agente de Acción y las limitaciones del prototipo.
+
+**Enlace al video:**
+
+(COLOCAR_AQUI_EL_ENLACE_DEL_VIDEO)
+
 
 
 ### Integrantes
@@ -158,17 +166,6 @@ ProyectoFinal_IA_Netlife/
 
 ---
 
-## Video de demostración
-
-El video explica la arquitectura, la configuración de los agentes, el proceso RAG, la decisión del orquestador, la consulta mixta, el Agente de Acción y las limitaciones del prototipo.
-
-**Enlace al video:**
-
-[Ver demostración del proyecto](COLOCAR_AQUI_EL_ENLACE_DEL_VIDEO)
-
-Duración máxima requerida: 10 minutos.
-
----
 
 ## Ejecución rápida
 
