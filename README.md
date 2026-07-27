@@ -14,11 +14,14 @@ La solución utiliza agentes especializados construidos con LangChain, un agente
 
 **Nombre del equipo:** IA estamos
 
+## Link del video: 
+
+
 ### Integrantes
 
 * John Cristofer Serrano Cordonez
 * Jose Luis Figueroa Gutierrez
-* Francisco Xavier
+* Francisco Xavier Jaramillo Gutierrez
 
 ---
 
