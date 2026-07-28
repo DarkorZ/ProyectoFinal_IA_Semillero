@@ -21,7 +21,7 @@ El video explica la arquitectura, la configuración de los agentes, el proceso R
 
 **Enlace al video:**
 
-[(ENLACE DEL VIDEO, CLICK AQUI!!)](https://youtu.be/SKHDVCjEjMA)
+[(ENLACE DEL VIDEO, CLICK AQUI!!)](https://youtu.be/fjYIyyNZdjE)
 
 
 
